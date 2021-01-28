@@ -17,6 +17,7 @@ class CreateBlogsTable extends Migration
             $table->id();
             $table->string('post_title');
             $table->string('post_slug');
+            $table->string('description');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('like')->default(0);
             $table->unsignedBigInteger('dislike')->default(0);            
