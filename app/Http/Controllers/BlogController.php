@@ -33,9 +33,6 @@ class BlogController extends Controller
         $value = $blog->like;
         $blog->like = $value+1;
         $blog->save();
-        return response()->json([
-            'message' => 'Liked',
-        ]);
     }    
  
     public function fetchDislike(Request $request)
@@ -52,8 +49,5 @@ class BlogController extends Controller
         $value = $blog->dislike;
         $blog->dislike = $value+1;
         $blog->save();
-        return response()->json([
-            'message' => 'Disliked',
-        ]);
     }
 }
